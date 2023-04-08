@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Book My Court API</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Book My Court API</h1>
+
+    <div class="content">
+        
+        <ol>
+            <li><a href="#authorization">Features</a>
+                <ol>
+                    <li><a href="#authorization">Authentication</a></li>
+        
+                    <li><a href="#courtsvenues">Courts & Venues</a></li>
+        
+                    <li><a href="#reservations">Reservations</a></li>
+        
+                    <li><a href="#user">Users</a></li>
+        
+                    <li><a href="#courtgroups">Court Groups</a></li>
+                </ol>
+            </li>
+            <li><a href="#endpoints">Endpoints documentation</a></li>
+                <ol>
+                    <li><a href="http://13.51.207.134:8000/swagger/">http://13.51.207.134:8000/swagger/</a></li>
+                </ol>
+          </ol>
+
+    </div>
+
+
+    <h2>API Features</h2>
+    <div class="features" id="features">
+
+        <div class="features_section" id="authorization">
+
+            <h3>🔑 Authorization </h3>
+            <div class="feature">Registration.</div>
+            <div class="feature">Login.</div>
+            <div class="feature">Logout.</div>
+            <div class="feature">Email confirmation.</div>
+            <div class="feature">Password reset.</div>
+
+        </div>
+
+        <div class="features_section" id="courtsvenues">
+
+            <h3>🎾 Courts & Venues</h3>
+            <div class="feature">Create / Read / Update / Delete.</div>
+            <div class="feature">View information about courts and venues without authorization.</div>
+            <div class="feature">Retrieve all courts within a venue.</div>
+            <div class="feature">Retrieve information about reserved hours for a court.</div>
+            <div class="feature">Sort venues based on location.</div>
+            <div class="feature">Only users with "owner" privilege can create, edit, and delete courts and venues.</div>
+            <div class="feature">Privilege "owner" is granted only by the administrator.</div>
+
+        </div>
+
+        <div class="features_section" id="reservations">
+
+            <h3>📖 Reservations</h3>
+            <div class="feature">Create / Read / Update / Delete.</div>
+            <div class="feature">Ability to assign a group to a reservation (if the user is a member of that group).</div>
+            <div class="feature">Prevent for creating reservation for an already reserved time slot.</div>
+            <div class="feature">Assigning group to a reservation automatically generates invitations for all of its members.</div>
+            <div class="feature">Retrieve information about responses to invitations from other users (poll).</div>
+
+        </div>
+
+        <div class="features_section" id="user">
+
+            <h3>👤 User</h3>
+            
+            <h4>✉️ Group invitations</h4>
+            <div class="features_subsection">
+                <div class="feature">Read and respond to invitations to a group.</div>
+            </div>
+            
+            <div class="feature">Read and respond to invitations to a reservation.</div>
+            <div class="feature">Retrieve the most frequently reserved courts for a user.</div>
+
+        </div>
+
+        <div class="features_section" id="courtgroups">
+
+            <h3>👥 Court Groups</h3>
+            <div class="feature">Create / Read / Update / Delete.</div>
+
+            <h4>✉️ Group invitations</h4>
+            <div class="features_subsection">
+                <div class="feature">Prevent invitations duplicates and inviting current members.</div>
+                <div class="feature">Only admins and the group creator can create invitations.</div>
+            </div>
+
+            <h4>👥 Memberships</h4>
+            <div class="features_subsection">
+                <div class="feature">Automatic membership for the creator.</div>
+                <div class="feature">Delete members or edit their roles (admin, member).</div>
+                <div class="feature">Only admins and the group creator can edit roles and remove members.</div>
+                <div class="feature">Prevent removal of the group creator.</div>
+                <div class="feature">Adding a new member automatically generates invitations for future reservations assigned to the group.</div>
+                <div class="feature">Deleting a member deletes his invitations for future group events.</div>
+            </div>
+            
+            <h4>📖 Reservations</h4>
+            <div class="features_subsection">
+                <div class="feature">Delete reservation assignments for the group (the reservation still exists but is only assigned to the reservation creator).</div>
+                <div class="feature">Only admins and the group creator can delete reservation assignments not created by them.</div>
+            </div>
+
+        </div>
+    </div>
+
+    
+    <h2>Endpoints documentation</h2>
+    <div id="endpoints">
+        <a href="http://13.51.207.134:8000/swagger/">http://13.51.207.134:8000/swagger/</a>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br>
+
+</body>
+
+</html>
