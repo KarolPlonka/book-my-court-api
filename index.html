@@ -7,6 +7,20 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎾</text></svg>">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+		$(document).ready(function() {
+			// Smooth scrolling
+			$('.scroll-link').click(function(event) {
+				event.preventDefault();
+				var target = $(this.hash);
+				$('html, body').animate({
+					scrollTop: target.offset().top
+				}, 1000);
+			});
+		});
+	</script>
+
 </head>
 
 <body>
@@ -15,30 +29,30 @@
     <div class="content">
         
         <ol>
-            <li><a href="#authorization">Features</a>
+            <li><a href="#features" class="scroll-link">Features</a>
                 <ol>
-                    <li><a href="#authorization">Authentication</a></li>
+                    <li><a href="#authorization" class="scroll-link">Authentication</a></li>
         
-                    <li><a href="#courtsvenues">Courts & Venues</a></li>
+                    <li><a href="#courtsvenues" class="scroll-link">Courts & Venues</a></li>
         
-                    <li><a href="#reservations">Reservations</a></li>
+                    <li><a href="#reservations" class="scroll-link">Reservations</a></li>
         
-                    <li><a href="#user">Users</a></li>
+                    <li><a href="#user" class="scroll-link">Users</a></li>
         
-                    <li><a href="#courtgroups">Court Groups</a></li>
+                    <li><a href="#courtgroups" class="scroll-link">Court Groups</a></li>
                 </ol>
             </li>
             <li><a href="#endpoints">Endpoints documentation</a></li>
                 <ol>
-                    <li><a href="http://13.51.207.134:8000/swagger/">http://13.51.207.134:8000/swagger/</a></li>
+                    <li><a href="http://13.51.207.134:8000/swagger/" class="scroll-link">http://13.51.207.134:8000/swagger/</a></li>
                 </ol>
           </ol>
 
     </div>
 
 
-    <h2>API Features</h2>
     <div class="features" id="features">
+    <h2>API Features</h2>
 
         <div class="features_section" id="authorization">
 
@@ -126,7 +140,6 @@
     </div>
 
     <br><br><br><br><br><br><br><br><br><br>
-
 </body>
 
 </html>
